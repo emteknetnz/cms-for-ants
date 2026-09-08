@@ -319,22 +319,23 @@
   function seed() {
     if (storage.get(KEY) !== null) return;
     const r = C.createPage([], {
-      title: 'Welcome to the nest',
-      slug: 'welcome',
+      title: 'We are ants',
+      slug: 'we-are-ants',
       body: [
-        '# What is this, a CMS for ants?',
+        '# We are ants.',
         '',
-        'Yes. It needs to be at least **three times smaller**.',
+        'We are small. We are many. We have never once read a manual.',
         '',
-        'There is no server, no build step, and no libraries. Just one HTML file carrying a crumb many times its own weight.',
+        'Each of us carries something heavier than ourselves and asks no questions about it. We follow the one in front. The one in front follows the one in front of her. Somewhere at the very front is an ant who is, frankly, guessing.',
         '',
-        '## Getting around',
+        '## Things we believe',
         '',
-        '- The *Colony* is the public site: every page is a tunnel.',
-        '- The *Queen\'s Chamber* is where pages are laid, edited and, regrettably, eaten.',
-        '- Press *Ant scale* in the header to view the site at its intended size.',
+        '- A crumb is a feast if you are the right size.',
+        '- Every picnic is a gift from a large and careless god.',
+        '- If you cannot go around it, go over it. If you cannot go over it, bring friends.',
+        '- The Queen is always right, mostly because nobody has checked.',
         '',
-        'Now go and [make a page](#/colony/new).',
+        'This is our colony. Mind the tunnels. They took ages.',
       ].join('\n'),
     });
     if (r.ok) save(r.pages);
