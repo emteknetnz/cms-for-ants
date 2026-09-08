@@ -35,8 +35,6 @@
   a { color: var(--amber); }
   a:hover { color: var(--soil); }
   :focus-visible { outline: 3px solid var(--amber-2); outline-offset: 2px; }
-  .skip { position: absolute; left: -999px; top: 8px; background: var(--soil); color: var(--sand-2); padding: .5rem 1rem; border-radius: 8px; z-index: 10; }
-  .skip:focus { left: 8px; }
 
   /* ---- Header with marching ants ---- */
   header.site {
@@ -136,14 +134,12 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
 <header class="site">
   <div class="row">
     <h1><a href="#/">🐜 Ant CMS <small>a content management system for ants</small></a></h1>
     <nav aria-label="Primary" id="nav">
       <a href="#/" data-nav="home">Colony</a>
-      <a href="#/colony" data-nav="admin">Queen's Chamber</a>
+      <a href="#/colony" data-nav="admin">🛠 CMS</a>
       <button type="button" id="scaleBtn" aria-pressed="false" title="Toggle ant-sized view">Ant scale</button>
     </nav>
   </div>
