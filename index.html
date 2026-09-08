@@ -22,13 +22,16 @@
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
-  body {
-    font: 16px/1.55 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-    color: var(--ink);
+  html {
     background:
       radial-gradient(ellipse at 20% 0%, rgba(240,169,75,.18), transparent 50%),
       repeating-linear-gradient(135deg, rgba(43,26,14,.035) 0 2px, transparent 2px 14px),
       var(--sand-2);
+    min-height: 100%;
+  }
+  body {
+    font: 16px/1.55 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    color: var(--ink);
     min-height: 100vh;
     transition: transform .5s cubic-bezier(.2,.8,.2,1);
   }
@@ -519,7 +522,7 @@
   scaleBtn.addEventListener('click', () => {
     const on = !document.body.classList.contains('ant-scale');
     applyScale(on);
-    if (on) toast('There. Now it is a CMS for ants.');
+    toast(on ? 'There. Now it is a CMS for ants.' : 'Ugh. Now it is a CMS for humans.');
   });
   const scaleOn = storage.get('antcms.scale') === '1';
   applyScale(scaleOn);
